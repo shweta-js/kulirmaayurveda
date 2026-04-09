@@ -1,0 +1,75 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "sqlite"
+  url      = env("DATABASE_URL")
+}
+
+model User {
+  id        String   @id @default(cuid())
+  email     String   @unique
+  name      String?
+  password  String   // In production, store bcrypt hash
+  role      String   @default("user") // "user" or "admin"
+  createdAt DateTime @default(now())
+  orders    Order[]
+  addresses Address[]
+}
+
+model Address {
+  id        String   @id @default(cuid())
+  userId    String
+  user      User     @relation(fields: [userId], references: [id])
+  fullName  String
+  phone     String
+  address   String
+  city      String
+  state     String
+  pincode   String
+  isDefault Boolean  @default(false)
+  createdAt DateTime @default(now())
+}
+
+model Product {
+  id               String   @id @default(cuid())
+  name             String
+  slug             String   @unique
+  image            String
+  price            Float    // Store as number (e.g., 369)
+  priceDisplay     String   // Store as "₹369"
+  shortDescription String
+  description      String
+  ingredients      String
+  benefits         String   // JSON string
+  usage            String   // JSON string
+  stock            Int      @default(100)
+  category         String
+  prescriptionReq  Boolean  @default(false)
+  createdAt        DateTime @default(now())
+  orderItems       OrderItem[]
+}
+
+model Order {
+  id            String    @id @default(cuid())
+  userId        String
+  user          User      @relation(fields: [userId], references: [id])
+  total         Float
+  status        String    @default("pending") // pending, paid, shipped, delivered, cancelled
+  razorpayOrderId String?  @unique
+  razorpayPaymentId String?
+  address       String    // JSON string of address
+  createdAt     DateTime  @default(now())
+  items         OrderItem[]
+}
+
+model OrderItem {
+  id        String  @id @default(cuid())
+  orderId   String
+  order     Order   @relation(fields: [orderId], references: [id])
+  productId String
+  product   Product @relation(fields: [productId], references: [id])
+  quantity  Int
+  price     Float
+}

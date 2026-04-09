@@ -1,0 +1,156 @@
+.contact-page {
+  background-color: #fdfdfb;
+  padding-bottom: 80px;
+}
+
+/* Hero Banner */
+.contact-hero {
+  position: relative;
+  height: 350px;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.hero-bg {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.hero-overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(62, 63, 41, 0.7); /* Deep Green Overlay */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: white;
+}
+
+.hero-overlay h1 {
+  font-size: 48px;
+  margin-bottom: 10px;
+}
+
+/* Info Cards */
+.info-cards-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 30px;
+  margin-top: -50px; /* Overlaps hero slightly */
+  position: relative;
+  z-index: 10;
+  padding: 0 20px;
+}
+
+.info-card {
+  background: white;
+  padding: 40px;
+  text-align: center;
+  border-radius: 15px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+  transition: transform 0.3s ease;
+}
+
+.info-card:hover { transform: translateY(-10px); }
+
+.info-icon {
+  font-size: 40px;
+  margin-bottom: 15px;
+}
+
+.info-card h3 {
+  color: #3E3F29;
+  margin-bottom: 15px;
+  font-size: 20px;
+}
+
+.info-card a, .info-card p {
+  display: block;
+  color: #6b705c;
+  text-decoration: none;
+  font-size: 15px;
+  line-height: 1.6;
+}
+
+/* Main Content Grid */
+.contact-main-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 50px;
+  margin-top: 80px;
+  padding: 0 20px;
+}
+
+.contact-form-container h2 {
+  color: #3E3F29;
+  margin-bottom: 30px;
+  font-size: 32px;
+}
+
+.aesthetic-form .form-group {
+  margin-bottom: 20px;
+}
+
+.aesthetic-form input, .aesthetic-form textarea {
+  width: 100%;
+  padding: 15px;
+  border: 1px solid #e0e0e0;
+  border-radius: 8px;
+  background: #f9f9f9;
+  font-family: inherit;
+  transition: border-color 0.3s;
+}
+
+.aesthetic-form input:focus, .aesthetic-form textarea:focus {
+  outline: none;
+  border-color: #BCA88D;
+  background: white;
+}
+
+.submit-btn {
+  background: #3E3F29;
+  color: white;
+  padding: 15px 40px;
+  border: none;
+  border-radius: 50px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.submit-btn:hover { background: #BCA88D; }
+
+.map-container {
+  min-height: 400px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+  border-radius: 15px;
+}
+
+/* WhatsApp Floating */
+.whatsapp-float {
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  background: #25d366;
+  color: white;
+  padding: 12px 25px;
+  border-radius: 50px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  text-decoration: none;
+  font-weight: 600;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+  z-index: 1000;
+}
+
+/* Mobile Adjustments */
+@media (max-width: 768px) {
+  .contact-main-grid { grid-template-columns: 1fr; }
+  .hero-overlay h1 { font-size: 32px; }
+  .info-cards-grid { margin-top: 20px; }
+}

@@ -1,0 +1,159 @@
+.product-detail-wrapper {
+  padding: 40px 0 100px;
+  background: #fdfdfb;
+}
+
+.back-link {
+  background: none;
+  border: none;
+  color: #BCA88D;
+  font-weight: 700;
+  cursor: pointer;
+  margin-bottom: 40px;
+}
+
+/* Header Section */
+.main-product-section {
+  display: grid;
+  grid-template-columns: 1.2fr 1fr;
+  gap: 60px;
+  margin-bottom: 80px;
+}
+
+.main-img-holder {
+  background: white;
+  padding: 40px;
+  border-radius: 20px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.02);
+}
+
+.main-img-holder img {
+  width: 100%;
+  height: auto;
+  object-fit: contain;
+}
+
+/* Purchase Section */
+.brand-label {
+  color: #BCA88D;
+  font-weight: 700;
+  letter-spacing: 2px;
+  font-size: 12px;
+}
+
+.product-purchase-info h1 {
+  font-size: 42px;
+  color: #3E3F29;
+  margin: 10px 0 20px;
+}
+
+.price-display {
+  font-size: 32px;
+  font-weight: 700;
+  color: #3E3F29;
+  margin-bottom: 30px;
+}
+
+.purchase-controls {
+  display: flex;
+  gap: 20px;
+  margin-bottom: 40px;
+}
+
+.quantity-picker {
+  display: flex;
+  align-items: center;
+  border: 1px solid #eef2e3;
+  border-radius: 50px;
+  padding: 5px 15px;
+  background: white;
+}
+
+.quantity-picker button {
+  background: none;
+  border: none;
+  font-size: 20px;
+  width: 30px;
+  cursor: pointer;
+}
+
+.quantity-picker span {
+  width: 40px;
+  text-align: center;
+  font-weight: 700;
+}
+
+.buy-now-btn{
+  flex-grow: 1;
+  background: #3E3F29;
+  color: white;
+  border: none;
+  padding: 15px 40px;
+  border-radius: 50px;
+  font-weight: 700;
+  font-size: 16px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.buy-now-btn:hover { background: #BCA88D; }
+
+.trust-badges {
+  display: flex;
+  gap: 20px;
+  font-size: 12px;
+  color: #8a8d7a;
+  font-weight: 600;
+}
+
+/* Detailed Content Grid */
+.detailed-content-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 40px;
+  border-top: 1px solid #eef2e3;
+  padding-top: 60px;
+}
+
+.content-block h3 {
+  font-size: 18px;
+  color: #3E3F29;
+  border-bottom: 2px solid #BCA88D;
+  display: inline-block;
+  margin-bottom: 15px;
+  padding-bottom: 5px;
+}
+
+.content-block p, .benefit-list li {
+  color: #6b705c;
+  line-height: 1.7;
+}
+
+.benefit-list {
+  padding-left: 20px;
+}
+
+.benefit-list li { margin-bottom: 10px; }
+
+.dosha-tag {
+  display: inline-block;
+  margin-top: 15px;
+  background: #f5f7ed;
+  padding: 5px 12px;
+  border-radius: 4px;
+  font-size: 12px;
+  font-weight: 700;
+  color: #3E3F29;
+}
+
+.usage-card {
+  background: #f5f7ed;
+  padding: 20px;
+  border-radius: 12px;
+}
+
+@media (max-width: 768px) {
+  .main-product-section, .detailed-content-grid {
+    grid-template-columns: 1fr;
+  }
+}

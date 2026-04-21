@@ -15,19 +15,19 @@ export default function Footer() {
               Restoring balance to your life since 1984.
             </p>
             <div className="social-links">
-              <a href="#" aria-label="Facebook">FB</a>
-              <a href="#" aria-label="Instagram">IG</a>
-              <a href="#" aria-label="WhatsApp">WA</a>
+              <a href="https://www.facebook.com/kulirmaayurveda/" aria-label="Facebook">FB</a>
+              <a href="https://www.instagram.com/kulirmaayurveda/" aria-label="Instagram">IG</a>
+              <a href=" https://wa.me/918921416185" aria-label="WhatsApp">WA</a>
             </div>
           </div>
-
+       
           {/* Quick Links */}
           <div className="footer-links">
             <h4>Quick Links</h4>
             <ul>
-              <li><Link href="/products">Our Products</Link></li>
+              <li><Link href="/shop">Our Products</Link></li>
               <li><Link href="/about">Our Story</Link></li>
-              <li><Link href="/gallery">Gallery</Link></li>
+              {/* <li><Link href="/gallery">Gallery</Link></li> */}
               <li><Link href="/contact">Contact Us</Link></li>
             </ul>
           </div>
@@ -46,7 +46,7 @@ export default function Footer() {
           {/* Contact Info */}
           <div className="footer-contact">
             <h4>Get In Touch</h4>
-            <p><strong>Email:</strong> care@kulirma.com</p>
+            <p><strong>Email:</strong> info@kulirmaayurveda.com</p>
             <p><strong>Phone:</strong> +91 98765 43210</p>
             <p><strong>Location:</strong> Kerala, India</p>
             <div className="trust-badge">

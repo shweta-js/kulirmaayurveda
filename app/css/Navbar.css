@@ -150,3 +150,77 @@
     margin: 10px 0;
   }
 }
+
+.badge {
+  background: #BCA88D;
+  color: white;
+  font-size: 10px;
+  padding: 2px 6px;
+  border-radius: 50%;
+  position: relative;
+  top: -10px;
+  left: -5px;
+}
+
+.login-link {
+  background: #3E3F29;
+  color: white !important;
+  padding: 8px 20px;
+  border-radius: 50px;
+  font-weight: 600;
+  transition: 0.3s;
+}
+
+.login-link:hover {
+  background: #BCA88D;
+}
+
+.profile-group {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.logout-btn {
+  background: none;
+  border: 1px solid #eef2e3;
+  color: #d9534f;
+  padding: 5px 12px;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 12px;
+}
+
+.nav-cart {
+  font-size: 20px;
+}
+
+
+
+
+
+.dropdown-menu button {
+  display: block;
+  width: 100%;
+  padding: 10px 15px;
+  text-align: left;
+  background: white;
+  border: none;
+  border-bottom: 1px solid #f0f0f0;
+  cursor: pointer;
+  font-family: inherit;
+  font-size: 14px;
+}
+
+.dropdown-menu button:hover {
+  background: #fdfdfb;
+  color: #BCA88D;
+}
+
+/* Hide the Google Translate Banner that sometimes appears at the top */
+.goog-te-banner-frame {
+  display: none !important;
+}
+body {
+  top: 0 !important;
+}

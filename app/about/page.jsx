@@ -2,9 +2,11 @@
 import { useState } from 'react';
 import Link from 'next/link';
 import "../css/About.css";
+import CertCard from "../../components/CertCard.jsx";
 
 export default function AboutPage() {
     const [selectedImg, setSelectedImg] = useState(null);
+    const [showModal, setShowModal] = useState(false);
 
   const newsImages = [
     "/assets/images/news/16.jpg",
@@ -42,6 +44,17 @@ export default function AboutPage() {
       description: 'Non-healing wound treated with traditional formulations. Complete closure achieved in 14 days.'
     }
   ];
+  const trademarkDetails = [
+        { label: "Reg No", value: "4328073" },
+        { label: "Class", value: "Ayurvedic & Medicinal" },
+        { label: "Date", value: "22 Oct 2019" }
+    ];
+
+    const gmpDetails = [
+        { label: "GMP No.", value: "1268" },
+        { label: "Authority", value: "Govt of Kerala" },
+        { label: "Date", value: "30 Oct 2025" }
+    ];
   return (
     <main className="about-page">
       {/* 1. HERO SECTION */}
@@ -51,7 +64,7 @@ export default function AboutPage() {
         <div className="hero-content">
           {/* <span className="hero-subtitle">ESTABLISHED 1984</span> */}
           {/* <h1>The Science of <br /><span>Natural Healing</span></h1> */}
-          <p>Traditional Ayurvedic formulations focused on advanced skin care and restorative healing support.</p>
+          <h2>Traditional Ayurvedic formulations focused on advanced skin care and restorative healing support.</h2>
         
         </div>
       </section>
@@ -176,7 +189,7 @@ export default function AboutPage() {
     </section>
 
       {/* 5. QUALITY & TRUST */}
-      <section className="trust-footer">
+      {/* <section className="trust-footer">
         <div className="container">
             <div className="trust-grid">
                 <div className="trust-item">
@@ -197,7 +210,26 @@ export default function AboutPage() {
                 </div>
             </div>
         </div>
-      </section>
+      </section> */}
+      <section className="about-certs">
+      <div className="cert-grid">
+        <CertCard 
+          title="Trademark Registered"
+          subtitle="Government of India Protection"
+          details={trademarkDetails}
+          imageSrc="/assets/images/certificates/trademark.jpg"
+          badgeIcon="/assets/images/certificates/trademark_seal.png"
+        />
+        
+        <CertCard 
+          title="GMP Certified"
+          subtitle="Quality & Safety Assurance"
+          details={gmpDetails}
+          imageSrc="/assets/images/certificates/gmp.jpg"
+          badgeIcon="/assets/images/certificates/gmp_seal.png"
+        />
+      </div>
+    </section>
     </main>
   );
 }

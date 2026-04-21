@@ -387,3 +387,107 @@
   .comparison-box { height: 250px; }
   .section-header-aesthetic h2 { font-size: 32px; }
 }
+
+.authenticity-section {
+  padding: 80px 0;
+  background-color: #fdfdfb;
+}
+
+.auth-card {
+  max-width: 800px;
+  margin: 0 auto;
+  background: white;
+  border: 1px solid #eef2e3;
+  border-radius: 12px;
+  padding: 40px;
+  box-shadow: 0 4px 20px rgba(62, 63, 41, 0.05);
+}
+
+.auth-header {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  margin-bottom: 30px;
+  border-bottom: 1px solid #f0f0f0;
+  padding-bottom: 20px;
+}
+
+.auth-seal { width: 60px; height: auto; }
+
+.details-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 20px;
+  margin: 30px 0;
+  background: #f9f9f5;
+  padding: 20px;
+  border-radius: 8px;
+}
+
+.detail-item span {
+  display: block;
+  font-size: 12px;
+  text-transform: uppercase;
+  color: #8a8d7a;
+  letter-spacing: 1px;
+}
+
+.detail-item strong {
+  font-size: 16px;
+  color: #3E3F29;
+}
+
+.view-cert-btn {
+  background: #3E3F29;
+  color: white;
+  border: none;
+  padding: 12px 30px;
+  border-radius: 50px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.view-cert-btn:hover { background: #BCA88D; }
+
+/* Modal Styles */
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.8);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+}
+
+.modal-content {
+  background: white;
+  width: 90%;
+  max-width: 500px;
+  border-radius: 15px;
+  position: relative;
+  overflow: hidden;
+}
+
+.cert-crop-container {
+  height: 300px;
+  overflow: hidden;
+  border-bottom: 1px solid #eee;
+}
+
+.cert-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* This creates the 'cropped' look showing the important top part */
+}
+
+.cert-highlights {
+  padding: 20px;
+  background: #3E3F29;
+  color: white;
+  font-size: 14px;
+}

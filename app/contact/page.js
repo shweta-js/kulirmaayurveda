@@ -1,3 +1,4 @@
+"use client";
 import React from 'react';
 import Link from 'next/link';
 import "../css/Contact.css";
@@ -39,8 +40,8 @@ export default function ContactPage() {
         </section>
 
         {/* Contact Form & Map Section */}
-        <section className="contact-main-grid">
-          <div className="contact-form-container">
+         <section className="contact-main-grid">
+          {/*<div className="contact-form-container">
             <h2>Send us a Message</h2>
             <form className="aesthetic-form">
               <div className="form-group">
@@ -54,7 +55,54 @@ export default function ContactPage() {
               </div>
               <button type="submit" className="submit-btn">Send Message</button>
             </form>
-          </div>
+          </div> */}
+
+         
+  <div className="contact-form-container">
+    <h2>Send us a Message</h2>
+
+    <form
+      className="aesthetic-form"
+      onSubmit={(e) => {
+        e.preventDefault();
+
+        const name = e.target.name.value;
+        const email = e.target.email.value;
+        const message = e.target.message.value;
+
+        const whatsappMessage = `Hello, I have an enquiry.%0A%0AName: ${name}%0AEmail: ${email}%0AMessage: ${message}`;
+
+        const phoneNumber = "918310767082"; // 🔥 replace with your number
+
+        window.open(
+          `https://wa.me/${phoneNumber}?text=${whatsappMessage}`,
+          "_blank"
+        );
+      }}
+    >
+      <div className="form-group">
+        <input type="text" name="name" placeholder="Your Name" required />
+      </div>
+
+      <div className="form-group">
+        <input type="email" name="email" placeholder="Your Email" required />
+      </div>
+
+      <div className="form-group">
+        <textarea
+          name="message"
+          placeholder="How can we help you?"
+          rows="5"
+          required
+        ></textarea>
+      </div>
+
+      <button type="submit" className="submit-btn">
+        Send via WhatsApp
+      </button>
+    </form>
+  </div>
+
 
           <div className="map-container">
             <iframe 

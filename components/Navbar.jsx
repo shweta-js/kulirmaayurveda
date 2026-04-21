@@ -2,6 +2,7 @@
 import { useState } from "react";
 import Link from "next/link";
 import "../app/css/Navbar.css";
+import { useRouter, usePathname } from "next/navigation";
 
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
@@ -27,7 +28,7 @@ export default function Navbar() {
           <li><Link href="/">Home</Link></li>
           <li><Link href="/about">About us</Link></li>
 
-          <li><a href="#">Shop</a></li>
+          <li><a href="/shop">Shop</a></li>
 
           {/* Language Dropdown */}
           <li className="dropdown">
@@ -47,15 +48,15 @@ export default function Navbar() {
             )}
           </li>
 
-          <li><Link href="/gallery">Gallery</Link></li>
+          {/* <li><Link href="/gallery">Gallery</Link></li> */}
           <li><Link href="/contact">Contact us</Link></li>
 
           {/* Cart */}
-          <li>
+          {/* <li>
             <Link href="/cart">
               Cart 🛒 (<span id="cart-count">0</span>)
             </Link>
-          </li>
+          </li> */}
         </ul>
       </div>
 

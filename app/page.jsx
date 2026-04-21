@@ -1,6 +1,6 @@
 "use client";
 import { useEffect, useState } from "react";
-import "./css/home.css";
+import "../app/css/Home.css";
 
 export default function Home() {
   const [index, setIndex] = useState(0);
@@ -56,6 +56,14 @@ export default function Home() {
 
     return () => clearInterval(interval);
   }, []);
+  useEffect(() => {
+    const timer = setInterval(() => {
+      setIndex((prevIndex) => (prevIndex + 1) % slides.length);
+    }, 5000); // Change this number for the interval speed (e.g., 2000 = 2s)
+
+    // Clean up the timer when the component unmounts
+    return () => clearInterval(timer);
+  }, [slides.length]);
 
  const testimonials = [
     {
@@ -81,11 +89,12 @@ export default function Home() {
           <div className="carousel">
 
             {/* Slides */}
-            <div className="carousel-inner">
+            <div className="carousel-inner" data-bs-interval="100">
               {slides.map((slide, i) => (
                 <div
                   key={i}
                   className={`carousel-item ${i === index ? "active" : ""}`}
+                  data-bs-interval="2000"
                 >
                   <img
                     src={slide.desktop}
@@ -164,7 +173,24 @@ export default function Home() {
             Our team has cured more than <strong>10,000+ people</strong> with
             trusted Ayurvedic treatments.
           </p>
-          <button className="stats-btn">BOOK APPOINTMENT</button>
+          {/* <button className="stats-btn">BOOK APPOINTMENT</button> */}
+        
+        <button
+  className="stats-btn"
+  onClick={() => {
+    const phoneNumber = "919876543210"; // 🔥 replace with your number
+
+    const message = encodeURIComponent(
+      "Hi, I would like to book a consultation regarding Kulirma products. Please guide me."
+    );
+
+    window.open(`https://wa.me/${phoneNumber}?text=${message}`, "_blank");
+  }}
+>
+  Book Appointment
+</button>
+
+
         </div>
         {/* Right Content */}
         <div className="stats-right">

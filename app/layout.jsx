@@ -1,8 +1,7 @@
-import './globals.css'
+import '../app/css/globals.css'
 import { Inter, Playfair_Display } from 'next/font/google'
 import Navbar from '../components/Navbar'
 import Footer from '../components/Footer'
-import { AuthProvider } from '/components/AuthProvider'
 
 const inter = Inter({ subsets: ['latin'] })
 const playfair = Playfair_Display({ subsets: ['latin'], variable: '--font-playfair' })
@@ -16,13 +15,11 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <body className={`${inter.className} ${playfair.variable} bg-ayurveda-cream`}>
-        <AuthProvider>
-          <Navbar />
-          <main className="min-h-screen">
-            {children}
-          </main>
-          <Footer />
-        </AuthProvider>
+        <Navbar />
+        <main className="min-h-screen">
+          {children}
+        </main>
+        <Footer />
       </body>
     </html>
   )

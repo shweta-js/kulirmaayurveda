@@ -7,6 +7,7 @@
 body {
   font-family: system-ui, -apple-system, sans-serif;
   background-color: #FFF8E7;
+  top: 0px !important;
 }
 
 /* Hero */
@@ -66,4 +67,26 @@ body {
 .card h3 {
   color: #2D6A4F;
   margin-bottom: 8px;
+}
+/* Hide the Google Translate Top Bar/Frame */
+.goog-te-banner-frame.skiptranslate {
+    display: none !important;
+}
+/* Hide the "Powered by Google" text */
+.goog-logo-link {
+    display: none !important;
+}
+.goog-te-gadget {
+    color: transparent !important;
+}
+
+/* Style the actual dropdown box */
+#google_translate_element select {
+    background-color: transparent;
+    border: 1px solid #3E3F29; /* Your dark green */
+    color: #3E3F29;
+    padding: 4px 8px;
+    border-radius: 4px;
+    font-family: inherit; /* Uses Inter/Playfair */
+    cursor: pointer;
 }

@@ -4,7 +4,6 @@ import "../app/css/Home.css";
 
 export default function Home() {
   const [index, setIndex] = useState(0);
-
   const slides = [
     { desktop: "/assets/images/slide1.jpg", mobile: "/assets/images/slide1_m.jpg" },
     { desktop: "/assets/images/slide2.jpg", mobile: "/assets/images/slide2_m.jpg" },

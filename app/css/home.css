@@ -216,7 +216,6 @@
   .trustbar-wrapper { gap: 15px; }
 }
 
-
 /* Responsive */
 @media (max-width: 992px) {
   .trustbar-container {
@@ -265,7 +264,6 @@
   flex-wrap: wrap;
 }
 
-/* Left */
 .stats-left {
   flex: 1;
   min-width: 300px;
@@ -328,7 +326,6 @@
     margin-top: 30px;
   }
 }
-
 
 
 

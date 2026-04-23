@@ -29,6 +29,7 @@
     "sqlite3": "^6.0.1"
   },
   "devDependencies": {
+    "@netlify/plugin-nextjs": "^5.15.9",
     "autoprefixer": "^10.4.27",
     "postcss": "^8.5.8",
     "prisma": "^5.22.0",

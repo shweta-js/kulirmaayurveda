@@ -72,7 +72,7 @@ export default function ContactPage() {
 
         const whatsappMessage = `Hello, I have an enquiry.%0A%0AName: ${name}%0AEmail: ${email}%0AMessage: ${message}`;
 
-        const phoneNumber = "918310767082"; // 🔥 replace with your number
+        const phoneNumber = "919847962414"; // 🔥 replace with your number
 
         window.open(
           `https://wa.me/${phoneNumber}?text=${whatsappMessage}`,

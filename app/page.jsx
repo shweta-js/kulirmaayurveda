@@ -177,7 +177,7 @@ export default function Home() {
         <button
   className="stats-btn"
   onClick={() => {
-    const phoneNumber = "919847962414"; // 🔥 replace with your number
+    const phoneNumber = "918921416185"; // 🔥 replace with your number
 
     const message = encodeURIComponent(
       "Hi, I would like to book a consultation regarding Kulirma products. Please guide me."

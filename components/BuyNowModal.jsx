@@ -17,7 +17,7 @@ export default function BuyNowModal({ product, onClose }) {
 const handleWhatsAppRedirect = (e) => {
   e.preventDefault();
 
-  const whatsappNumber = "9198479 62414"; // Your actual number
+  const whatsappNumber = "9198921416185"; // Your actual number
   const productLink = window.location.origin + `/product/${product.id}`;
 
   // Formatting the Message without bold asterisks

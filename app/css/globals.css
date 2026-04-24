@@ -9,7 +9,18 @@ body {
   background-color: #FFF8E7;
   top: 0px !important;
 }
+* {
+  box-sizing: border-box;
+}
 
+html, body {
+  overflow-x: hidden; /* Prevents the horizontal scroll */
+  width: 100%;
+}
+img {
+  max-width: 100%;
+  height: auto;
+}
 /* Hero */
 .hero {
   background: linear-gradient(135deg, #2D6A4F, #1B4332);
@@ -89,4 +100,27 @@ body {
     border-radius: 4px;
     font-family: inherit; /* Uses Inter/Playfair */
     cursor: pointer;
+}
+/* 1. The Container (The Track) */
+::-webkit-scrollbar {
+  width: 8px; /* Slightly wider than 6px for easier clicking, but still thin */
+}
+
+/* 2. The Background */
+::-webkit-scrollbar-track {
+  background: rgba(0, 0, 0, 0.05); /* Very faint background */
+  border-radius: 10px;
+}
+
+/* 3. The Draggable Handle */
+::-webkit-scrollbar-thumb {
+  background: rgba(0, 0, 0, 0.2); /* Semi-transparent grey */
+  border-radius: 10px;
+  border: 2px solid transparent; /* Creates a "padding" effect around the handle */
+  background-clip: content-box; /* Makes the bar look even thinner */
+}
+
+/* 4. Hover Effect */
+::-webkit-scrollbar-thumb:hover {
+  background: #2c3e50; /* Match your brand color (e.g., a dark Ayurvedic green or grey) */
 }

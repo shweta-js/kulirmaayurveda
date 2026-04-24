@@ -65,15 +65,30 @@
 }
 
 /* INTRO SECTION */
-.about-intro {
+/* Base styles (Desktop) */
+.intro-grid {
   padding: 100px 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px;
+  padding-top:2rem;
 }
 
+/* Mobile view (screens smaller than 768px) */
+@media (max-width: 768px) {
+  .intro-grid {
+    padding: 50px 20px !important;
+    display: flex !important;
+    flex-direction: column !important;
+  }
+}
 .intro-grid {
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 80px;
   align-items: center;
+  padding:2rem;
 }
 
 .intro-text label {

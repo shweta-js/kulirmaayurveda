@@ -1,6 +1,7 @@
+"use client";
 import Link from 'next/link'
 import "../app/css/Footer.css";
-
+import { FaFacebook, FaInstagram, FaWhatsapp } from 'react-icons/fa';
 export default function Footer() {
   return (
     <footer className="footer">
@@ -15,9 +16,15 @@ export default function Footer() {
               Restoring balance to your life since 1984.
             </p>
             <div className="social-links">
-              <a href="https://www.facebook.com/kulirmaayurveda/" aria-label="Facebook">FB</a>
-              <a href="https://www.instagram.com/kulirmaayurveda/" aria-label="Instagram">IG</a>
-              <a href=" https://wa.me/918921416185" aria-label="WhatsApp">WA</a>
+              <a href="https://www.facebook.com/kulirmaayurveda/" target="_blank" rel="noopener noreferrer" aria-label="Facebook">
+                <FaFacebook size={24} />
+              </a>
+              <a href="https://www.instagram.com/kulirmaayurveda/" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
+                <FaInstagram size={24} />
+              </a>
+              <a href="https://wa.me/918921416185" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp">
+                <FaWhatsapp size={24} />
+              </a>
             </div>
           </div>
        

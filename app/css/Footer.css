@@ -150,3 +150,21 @@
     gap: 15px;
   }
 }
+.social-links {
+  display: flex;
+  gap: 15px;
+  margin-top: 15px;
+}
+
+.social-links a {
+  color: #8a8d7a; /* Or your brand color */
+  transition: transform 0.2s ease, color 0.2s ease;
+  display: flex;
+  align-items: center;
+}
+
+.social-links a:hover {
+  color: #1a3317; 
+  transform: translateY(-2px);
+}
+

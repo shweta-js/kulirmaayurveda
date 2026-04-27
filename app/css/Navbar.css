@@ -30,7 +30,7 @@
   align-items: center;
   list-style: none;
   padding: 0;
-  margin-right:8rem;
+  margin-right:4rem;
 }
 
 .navbar-nav li {
@@ -106,7 +106,7 @@
 .flag {
   /* We use fixed to keep it relative to the screen edge, not the navbar items */
   position: absolute; 
-  right: 10%;        /* Always 10% from the right edge */
+  right: 5%;        /* Always 10% from the right edge */
   top: 0;            /* Aligns with the top of the viewport */
   width: 60px;
   z-index: 10001;    /* Higher than the navbar and menu */
